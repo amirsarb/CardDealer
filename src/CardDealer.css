@@ -1,0 +1,43 @@
+.GreenTable{
+    background-color: #368536;
+    margin-top: 50px;
+    width: 40rem;
+    text-align: center;
+    display: inline-block;
+    height: 35em;
+    border-radius: 10px;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+}
+
+.button {
+  background-color: rgb(255 255 255 / 70%);
+  color: black;
+  border: 2px solid #555555;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+.container {
+    position:relative;
+    top:20%;
+}
+
+.cards {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
