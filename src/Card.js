@@ -21,25 +21,6 @@ class Card extends Component {
 
     } //END Constructor
 
-    //Generate Random rotate degree
-
-
-    // componentDidMount(){
-    //     var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-    //     // Random degree between 0 and 20
-    //     const deg = plusOrMinus * Math.floor(Math.random()*20)
-    //  this.setState({degree:deg})
-
-    // }
-
-
-    // rotateDegree()
-    // {
-    //     //Negative degree or positive degree
-    //     var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-    //    // Random degree between 0 and 20
-    // return plusOrMinus * Math.floor(Math.random()*20)
-    // }
 
     render() {
 

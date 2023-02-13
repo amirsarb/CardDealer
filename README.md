@@ -1,3 +1,85 @@
+<div>
+  <h1 align="center"> CardDealer is a project in React 🧑‍💻</h1>
+  <h2 align="center"> A pratice for componentDidMount and Axios</h2>
+<h3>Goals</h3>
+  <ul>
+  <li>
+    Practicing componentDidMount()
+  </li>
+  <li>
+    Practicing Axios()
+  </li>
+
+   </ul>
+
+  <p>
+    Screenshot:
+  </p>
+
+  <a href="">
+    <img
+      alt="CardDealer in React"
+      src="screenshot.jpg"
+    />
+  </a>
+</div>
+
+<hr />
+
+## Requirements
+- NPM
+- React
+- React-dom
+- Axios
+
+## API
+API for card provided by : https://deckofcardsapi.com/api/deck/new/shuffle/
+
+## Main Parts
+
+
+- componentDidMount
+This function run once at the start, we can get our dec-id which representing our hand
+
+```javascript
+  componentDidMount() {
+    axios.get(`https://deckofcardsapi.com/api/deck/new/shuffle/`)
+      .then(res => {
+        const cards = res.data;
+        this.setState({ deck_id: cards.deck_id, remaining: cards.remaining });
+      })
+  }
+```
+- getCard
+Now, we can fetch each card by this dec-id , each hand can run 52 times.
+
+```javascript
+  getCard(id) {
+
+    axios.get(`https://deckofcardsapi.com/api/deck/${id}/draw/`)
+      .then(res => {
+        const card = res.data['cards'];
+
+
+        let currentImage = card.map(e => e.images.png)
+
+        this.setState({ images: [...this.state.images, currentImage] });
+
+      })
+
+  }
+```
+- getRandomDegree
+```javascript
+  getRandomDegree() {
+
+    var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+    // Random degree between 0 and 20
+    return plusOrMinus * Math.floor(Math.random() * 20)
+    // this.setState({degree:deg})
+  }
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
